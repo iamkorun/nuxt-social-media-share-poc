@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   app: {
     head: {
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1'
+      viewport: 'width=device-width, initial-scale=1',
     },
   },
 
@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     // environment variables provided by Netlify
     url: process.env.NUXT_PUBLIC_WEB_URL || 'http://localhost:3000',
     name: 'Cat Social Share',
-    indexable: process.env.BRANCH === 'release' || false, // set indexable only on production, not on branch deploys
+    indexable: false, // set indexable only on production, not on branch deploys
     trailingSlash: true,
     defaultLocale: 'en',
   },

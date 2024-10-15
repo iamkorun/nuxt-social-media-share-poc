@@ -1,5 +1,5 @@
 <template>
-  <img src="/images/cat.png" alt="A cute cat" />
+  <img :src="imageUrl" alt="A cute cat" />
   <div>
     <!-- Facebook Share Button -->
     <button @click="shareOnFacebook" aria-label="Share on Facebook">
@@ -20,6 +20,7 @@
 const config = useRuntimeConfig();
 const pageUrl = ref(config.public.WEB_URL);
 const title = 'This is cat title';
+const imageUrl = '/images/kitten.jpg';
 
 const shareOnFacebook = () => {
   const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
@@ -42,12 +43,13 @@ const shareOnLinkedIn = () => {
   window.open(url, '_blank', 'width=600,height=400');
 };
 
+
 useSeoMeta({
   titleTemplate: '',
   title: 'This is cat title',
   description: 'A description about the cat',
   ogDescription: 'A description about the cat',
-  ogImage: '/images/cat.png',
+  ogImage: '/images/kitten.jpg',
   ogTitle: 'This is cat title',
 });
 </script>
