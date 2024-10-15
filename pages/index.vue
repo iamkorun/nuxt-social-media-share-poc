@@ -20,7 +20,6 @@
 const config = useRuntimeConfig();
 const pageUrl = ref(config.public.WEB_URL);
 const title = 'This is cat title';
-const imageUrl = `${pageUrl.value}/images/cat.png`;
 
 const shareOnFacebook = () => {
   const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
@@ -48,7 +47,7 @@ useSeoMeta({
   title: 'This is cat title',
   description: 'A description about the cat',
   ogDescription: 'A description about the cat',
-  ogImage: imageUrl,
+  ogImage: '/images/cat.png',
   ogTitle: 'This is cat title',
 });
 </script>
