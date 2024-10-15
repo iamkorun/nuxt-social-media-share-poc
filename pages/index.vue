@@ -40,6 +40,7 @@ useSeoMeta({
   titleTemplate: '',
   title: 'This is cat title',
   description: 'A description about the cat',
+  ogUrl: pageUrl.value,
   ogTitle: 'This is cat title',
   ogDescription: 'A description about the cat',
   ogImageUrl: '/images/kitten.jpg',
