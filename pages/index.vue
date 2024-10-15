@@ -38,7 +38,7 @@ const imageUrl = `${pageUrl}/images/cat.png`;
 const imageWidth = 1200; // Image width
 const imageHeight = 630; // Image height
 
-useHead({
+definePageMeta({
   title: 'This is a cat',
   meta: [
     { property: 'og:title', content: 'This is a cat' },
