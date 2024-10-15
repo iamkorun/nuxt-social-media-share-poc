@@ -9,6 +9,7 @@
 </template>
 
 <script setup lang="ts">
+const route = useRoute();
 const config = useRuntimeConfig();
 const pageUrl = ref(config.public.WEB_URL);
 const title = 'This is cat title';
@@ -23,11 +24,11 @@ const shareOnFacebook = () => {
 
 useSeoMeta({
   titleTemplate: '',
-  title: 'This is cat title',
-  description: 'A description about the cat',
+  title: `This is cat title #${route.params.id}`,
+  description: `A description about the cat #${route.params.id}`,
   ogUrl: pageUrl.value,
-  ogTitle: 'This is cat title',
-  ogDescription: 'A description about the cat',
+  ogTitle: `This is cat title #${route.params.id}`,
+  ogDescription: `A description about the cat #${route.params.id}`,
   ogImageUrl: '/images/kitten.jpg',
   ogImageSecureUrl: '/images/kitten.jpg',
   ogImageType: 'image/jpeg',
