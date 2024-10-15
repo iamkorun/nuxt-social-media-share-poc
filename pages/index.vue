@@ -1,4 +1,10 @@
 <template>
+  <Head>
+    <Title>{{ title }}</Title>
+    <Meta name="description" :content="title" />
+    <Meta name="og:title" :content="title" />
+    <Style type="text/css" children="body { background-color: green; }"></Style>
+  </Head>
   <img src="/images/cat.png" />
   <!-- Facebook Share Button -->
   <button @click="shareOnFacebook">Share on Facebook</button>
@@ -34,19 +40,8 @@ const shareOnLinkedIn = () => {
   window.open(url, '_blank', 'width=600,height=400');
 };
 
+const title = 'This is cat title';
 const imageUrl = `${pageUrl}/images/cat.png`;
 const imageWidth = 1200; // Image width
 const imageHeight = 630; // Image height
-
-definePageMeta({
-  title: 'This is a cat',
-  meta: [
-    { property: 'og:title', content: 'This is a cat' },
-    { property: 'og:description', content: 'Cat cat cat cat' },
-    { property: 'og:image', content: imageUrl },
-    { property: 'og:image:width', content: imageWidth.toString() },
-    { property: 'og:image:height', content: imageHeight.toString() },
-    { property: 'og:type', content: 'website' },
-  ],
-});
 </script>
