@@ -32,9 +32,8 @@ const shareOnLinkedIn = () => {
 };
 
 useSeoMeta({
-  title,
+  title: 'This is cat title',
   description: 'A description about the cat',
-  ogImage: imageUrl,
   ogDescription: 'A description about the cat',
   ogTitle: 'This is cat title',
 });

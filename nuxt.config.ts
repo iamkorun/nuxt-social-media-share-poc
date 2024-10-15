@@ -3,14 +3,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Your Website Title',
-      meta: [
-        { charset: 'utf-8' },
-        { property: 'og:title', content: 'Your Open Graph Title' },
-        { property: 'og:description', content: 'Your Open Graph Description' },
-        { property: 'og:image', content: 'https://example.com/image.jpg' },
-        { property: 'og:url', content: 'https://example.com' },
-        { property: 'og:type', content: 'website' },
-      ],
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1'
     },
   },
 
