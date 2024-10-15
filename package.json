@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@stefanobartoletti/nuxt-social-share": "^1.1.2",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
