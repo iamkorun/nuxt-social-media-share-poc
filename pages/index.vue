@@ -7,7 +7,6 @@
     <Meta property="og:image" :content="imageUrl" />
     <Meta property="og:url" :content="pageUrl" />
     <Meta property="og:type" content="website" />
-    <Style type="text/css" children="body { background-color: green; }"></Style>
   </Head>
   <img src="/images/cat.png" alt="A cute cat" />
   <div>
