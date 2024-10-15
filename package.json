@@ -1,6 +1,5 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -10,7 +9,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/seo": "^2.0.0-rc.23",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"

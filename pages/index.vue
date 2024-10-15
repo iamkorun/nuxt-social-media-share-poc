@@ -5,14 +5,6 @@
     <button @click="shareOnFacebook" aria-label="Share on Facebook">
       Share on Facebook
     </button>
-    <!-- Twitter Share Button -->
-    <button @click="shareOnTwitter" aria-label="Share on Twitter">
-      Share on Twitter
-    </button>
-    <!-- LinkedIn Share Button -->
-    <button @click="shareOnLinkedIn" aria-label="Share on LinkedIn">
-      Share on LinkedIn
-    </button>
   </div>
 </template>
 
@@ -48,8 +40,10 @@ useSeoMeta({
   titleTemplate: '',
   title: 'This is cat title',
   description: 'A description about the cat',
-  ogDescription: 'A description about the cat',
-  ogImage: '/images/kitten.jpg',
   ogTitle: 'This is cat title',
+  ogDescription: 'A description about the cat',
+  ogImageUrl: '/images/kitten.jpg',
+  ogImageSecureUrl: '/images/kitten.jpg',
+  ogImageType: 'image/jpeg'
 });
 </script>
