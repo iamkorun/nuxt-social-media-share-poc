@@ -10,5 +10,5 @@
 useSeoMeta({
   titleTemplate: `%s - Cat Site`,
   ogSiteName: 'Cat Site',
-})
+});
 </script>
