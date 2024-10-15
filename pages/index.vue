@@ -34,23 +34,19 @@ const shareOnLinkedIn = () => {
   window.open(url, '_blank', 'width=600,height=400');
 };
 
-const imageUrl = '/images/cat.png';
+const imageUrl = `${pageUrl}/images/cat.png`;
 const imageWidth = 1200; // Image width
 const imageHeight = 630; // Image height
 
 useHead({
   title: 'This is a cat',
   meta: [
-    { charset: 'utf-8' },
     { property: 'og:title', content: 'This is a cat' },
     { property: 'og:description', content: 'Cat cat cat cat' },
     { property: 'og:image', content: imageUrl },
     { property: 'og:image:width', content: imageWidth.toString() },
     { property: 'og:image:height', content: imageHeight.toString() },
     { property: 'og:type', content: 'website' },
-    { property: 'twitter:image:src', content: imageUrl },
-    { property: 'twitter:image:width', content: imageWidth.toString() },
-    { property: 'twitter:image:height', content: imageHeight.toString() },
   ],
 });
 </script>
