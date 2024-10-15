@@ -1,13 +1,4 @@
 <template>
-  <Head>
-    <Title>{{ title }}</Title>
-    <Meta name="description" :content="title" />
-    <Meta property="og:title" :content="title" />
-    <Meta property="og:description" :content="description" />
-    <Meta property="og:image" :content="imageUrl" />
-    <Meta property="og:url" :content="pageUrl" />
-    <Meta property="og:type" content="website" />
-  </Head>
   <img src="/images/cat.png" alt="A cute cat" />
   <div>
     <!-- Facebook Share Button -->
@@ -23,7 +14,6 @@
 const config = useRuntimeConfig();
 const pageUrl = ref(config.public.WEB_URL);
 const title = 'This is cat title';
-const description = 'A description about the cat'; // Dynamic description
 const imageUrl = `${pageUrl.value}/images/cat.png`;
 
 const shareOnFacebook = () => {
@@ -40,4 +30,12 @@ const shareOnLinkedIn = () => {
   const url = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(pageUrl.value)}`;
   window.open(url, '_blank', 'width=600,height=400');
 };
+
+useSeoMeta({
+  title,
+  description: 'A description about the cat',
+  ogImage: imageUrl,
+  ogDescription: 'A description about the cat',
+  ogTitle: 'This is cat title',
+});
 </script>
