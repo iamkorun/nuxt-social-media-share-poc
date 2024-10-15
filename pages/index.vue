@@ -20,6 +20,7 @@ const shareOnFacebook = () => {
   window.open(url, '_blank', 'width=600,height=400');
 };
 
+// @see parameters here https://github.com/harlan-zw/zhead/blob/main/packages/zhead/src/metaFlat.ts#L167
 useSeoMeta({
   titleTemplate: '',
   title: 'This is cat title',
