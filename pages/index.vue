@@ -11,7 +11,6 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
 const pageUrl = ref(config.public.WEB_URL);
-const title = 'This is cat title';
 const imageUrl = '/images/kitten.jpg';
 
 const shareOnFacebook = () => {
