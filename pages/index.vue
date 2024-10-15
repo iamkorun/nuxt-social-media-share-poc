@@ -9,7 +9,8 @@
 </template>
 
 <script setup lang="ts">
-const pageUrl = ref(window.location.href);
+const config = useRuntimeConfig();
+const pageUrl = ref(config.public.WEB_URL);
 
 const shareOnFacebook = () => {
   const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
@@ -33,23 +34,23 @@ const shareOnLinkedIn = () => {
   window.open(url, '_blank', 'width=600,height=400');
 };
 
-const imageUrl = '/images/cat.png'
-const imageWidth = 1200 // Image width
-const imageHeight = 630 // Image height
+const imageUrl = '/images/cat.png';
+const imageWidth = 1200; // Image width
+const imageHeight = 630; // Image height
 
-useSeoMeta({
-  title: 'This is a cat',
-  ogTitle: 'This is a cat',
-  description: 'Cat cat cat cat',
+useHead({
   title: 'This is a cat',
   meta: [
+    { charset: 'utf-8' },
     { property: 'og:title', content: 'This is a cat' },
     { property: 'og:description', content: 'Cat cat cat cat' },
     { property: 'og:image', content: imageUrl },
     { property: 'og:image:width', content: imageWidth.toString() },
     { property: 'og:image:height', content: imageHeight.toString() },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://example.com/your-page' },
-  ]
+    { property: 'twitter:image:src', content: imageUrl },
+    { property: 'twitter:image:width', content: imageWidth.toString() },
+    { property: 'twitter:image:height', content: imageHeight.toString() },
+  ],
 });
 </script>
